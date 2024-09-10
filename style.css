@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(29, 29, 29);
+    font-family: sans-serif;
+}
+canvas {
+    background-image: url("backgroundRally.png"); /* Zelená barva pro pozadí */
+    display: block;
+    margin: 0 auto;
+  }
+h1{
+    color: darkgreen;
+    text-align: center;
+}
