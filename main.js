@@ -1,5 +1,7 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
+const actualScore = document.getElementById("actualScore");
+const actualSpeed = document.getElementById("actualSpeed");
 
 // Načítání obrázku auta
 const carImage = new Image();
@@ -19,8 +21,9 @@ const car = {
 
 const lanes = [50, 150, 250];
 let obstacles = [];
-let speed = 9; // Rychlost pohybu překážek
+let speed = 5; // Rychlost pohybu překážek
 let gameOver = false;
+let score = 0;
 
 // Vykreslení auta pomocí obrázku
 function drawCar() {
@@ -77,6 +80,10 @@ function gameLoop() {
     return;
   }
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+    score += 1;
+    speed +=0.001;
+    actualScore.innerText = "Score: "+score;
+    actualSpeed.innerText = "Speed: "+speed+" Km/h";
   drawCar();
   drawObstacles();
   updateObstacles();
@@ -96,7 +103,7 @@ document.addEventListener('keydown', function(event) {
 });
 
 //INTERVALY GENEROVÁNÍ PŘEKÁŽEK
-setInterval(createObstacle, 400);
+setInterval(createObstacle, 1000);
 
 //GAME START
 carImage.onload = function() {

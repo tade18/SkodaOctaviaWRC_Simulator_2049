@@ -1,6 +1,7 @@
 body{
     background-color: rgb(29, 29, 29);
     font-family: sans-serif;
+    color: greenyellow;
 }
 canvas {
     background-image: url("backgroundRally.png"); /* Zelená barva pro pozadí */
