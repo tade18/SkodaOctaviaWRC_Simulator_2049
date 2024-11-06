@@ -1,3 +1,1 @@
-NextGen only
-Ovládání: šipka nahoru → nahoru
-          šipka dolu → dolu
+Just a little "for fun" game
