@@ -81,7 +81,7 @@ function gameLoop() {
   }
   ctx.clearRect(0, 0, canvas.width, canvas.height);
     score += 1;
-    speed +=0.001;
+    speed +=0.1;
     actualScore.innerText = "Score: "+score;
     actualSpeed.innerText = "Speed: "+speed+" Km/h";
   drawCar();
